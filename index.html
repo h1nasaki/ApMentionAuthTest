@@ -1,20 +1,26 @@
 <!DOCTYPE html>
 <html>
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title></title>
+    <title>AP認証テスト</title>
+    <link rel="stylesheet" href="index.css">
 </head>
-
 <body>
-    <input id="usernameInput" type="text">
-    <button id="submitButton">Submit</button>
-    <p id="code">Your Key:</p>
-    <button id="checkButton">Check</button>
-    <p id="state"></p>
-
+    <div class="container">
+        <h1>APメンション認証</h1>
+        <div class="form-group">
+            <input id="usernameInput" type="text" placeholder="ユーザー名を入力">
+            <button id="submitButton">キーを生成</button>
+        </div>
+        <div class="result">
+            <p id="code">ここに生成されたキーが表示されます。</p>
+        </div>
+        <div class="form-group">
+            <button id="checkButton">キーを確認</button>
+        </div>
+        <p id="state" class="message">ステータスメッセージがここに表示されます。</p>
+    </div>
     <script src="./main.js" type="module"></script>
 </body>
-
 </html>
