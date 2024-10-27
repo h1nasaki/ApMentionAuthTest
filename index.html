@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>AP認証テスト</title>
-    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="/styles.css">
 </head>
+
 <body>
     <div class="container">
         <h1>APメンション認証</h1>
@@ -20,7 +22,14 @@
             <button id="checkButton">キーを確認</button>
         </div>
         <p id="state" class="message">ステータスメッセージがここに表示されます。</p>
+
+        <!-- 区切り線 -->
+        <hr class="divider">
+
+        <!-- LocalStorageビューアへのリンク -->
+        <a href="./localStorage.html" class="footer-link">LocalStorage Viewer</a>
     </div>
-    <script src="./main.js" type="module"></script>
+    <script src="./index.js" type="module"></script>
 </body>
+
 </html>
