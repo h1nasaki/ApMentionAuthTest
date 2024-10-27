@@ -22,7 +22,7 @@ export function saveLocalStorage(key, object) {
     console.log(`called for: ${key}`)
     console.dir(object)
     const jsonString = JSON.stringify(object);
-    localStorage.setItem(key, jsonString); // Replace 'myData' with your desired key name
+    localStorage.setItem(key, jsonString);
 
     console.groupEnd()
 }
@@ -37,12 +37,10 @@ export function loadLocalStorage(key) {
     const obj = localStorage.getItem(key);
     console.dir(obj)
 
-    const jsonString = JSON.stringify(obj);
-
     console.groupEnd()
-    if (jsonString) {
-        return JSON.parse(jsonString);
+    if (obj) {
+        return JSON.parse(obj);
     } else {
-        return null; // Return null if there's no data
+        return null;
     }
 }
