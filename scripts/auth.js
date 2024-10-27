@@ -2,19 +2,21 @@ import { generateKey, saveLocalStorage, loadLocalStorage } from './utils.js'
 import { getMentions } from './mkApi.js'
 
 export function registRequest(username) {
-
-    console.log(`registRequest Called: ${username}`)
+    console.group(`auth.js/registRequest`)
+    console.log(`called for: ${username}`)
 
     const key = generateKey()
+
+    console.log(`generated: ${key}`)
 
     const obj = {
         username,
         key
     }
 
-    console.log(`Registed: ${obj.username}/${obj.key}`)
-
     saveLocalStorage(username, obj)
+
+    console.groupEnd()
 
     return key;
 }
